@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: "Oxygen", "Lora", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page 
+{
+    background: #FFFFFF;
+    color: #000;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+/*<!--  HEADER -->*/
+.header
+{
+    height: 74px;
+}
+
+.header__inner
+{
+    padding: 17px 0;
+}
+
+.header__item 
+{
+    margin-right: 490px;
+}
+
+.header__logo>span
+{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #000;
+    /* color: #FFFFFF; */
+}
+
+.menu__item {
+    margin-right: 40px;
+    display: inline;
+}
+
+.menu__item>span
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #000;
+    /* color: #FFFFFF; */
+}
+/*<!--/ HEADER -->*/
+
+
+/*<!--  MAIN__HEAD -->*/
+.main__head
+{
+    background: url("../img/home_page_preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.main__title
+{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 51px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.main__description
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.63);
+    margin: 20px 0 31px 0;
+}
+
+.main__button 
+{
+    width: 167px;
+    height: 44px;
+    background: #DD783F;
+    border-radius: 3px;
+    border-style: none;
+}
+
+.main__button>span 
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+/*<!--/ MAIN__HEAD -->*/
+
+
+/*<!--  POP__TAGS -->*/
+.pop__tags
+{
+    background: #FFFFFF;
+    height: 65px;
+}
+
+.pop__tags
+.section__body
+{
+    padding: 10px 0;
+}
+
+.tag__list-item 
+{
+    margin-right: 41px;
+}
+
+.tag__list-item>span
+{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #768088;
+}
+/*<!--/ POP__TAGS -->*/
+
+
+/*<!--  MAIN-CONTENT -->*/
+.main__content
+{
+    background: #F7F7F7;
+    width: 1440px;
+}
+
+.featured__posts
+{
+    padding: 60px 0;
+}
+
+.featured__posts
+.section__header
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    color: #2E2E2E;
+}
+
+.post__list-item
+.post__tag
+{
+    height: 26px;
+    background: #DD783F;
+    border-radius: 2px;
+}
+
+.post__list-item
+.post__tag>span
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.post__list-item
+.post__title
+{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.post__list-item
+.post__description
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+}
+/*<!--/ MAIN-CONTENT -->*/
+
+
+/*<!--  FOOTER -->*/
+.footer {
+    height: 89px;
+    background: linear-gradient(0deg, rgba(35, 47, 56, 0.6), rgba(35, 47, 56, 0.6)), url("../img/footer_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer__inner
+{
+    padding: 17px;
+}
+
+.footer__item 
+{
+    margin-right: 490px;
+}
+
+.footer__logo>span
+{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.menu__item {
+    margin-right: 40px;
+    display: inline;
+}
+
+.footer
+.menu__item>span
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+/*<!--/ FOOTER -->*/
+
+/*<!--  BLOCK -->*/
+/*<!--/ BLOCK -->*/
