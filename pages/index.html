@@ -9,283 +9,117 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="./img/favicon.ico">
+    <!-- <link href="../static/css/styles.css" rel="stylesheet" type="text/css"> -->
+    <link href="../static/css/home.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../static/img/favicon.ico">
   </head>
 
   <body class="page">
     <!-- HEADER -->
     <header class="header">
+      <div class="header__nav">
+        <a class="header__nav-item header__logo">Escape.</a>
+        <nav class="header__nav-item header__menu">
+          <a href="" class="header__menu-link">Home</a>
+          <a href="" class="header__menu-link">Categories</a>
+          <a href="" class="header__menu-link">About</a>
+          <a href="" class="header__menu-link">Contact</a>
+        </nav>
+      </div>
       <div class="header__content">
-        <div class="header__item header__left">
-          <a href="./index.html" class="header__logo text_white">
-            <span>Escape.</span>
-          </a>
-        </div>
-        <div class="header__item header__menu">
-          <nav class="header-menu">
-            <a href="./index.html" class="header-menu__item text_white">
-              <span>HOME</span>
-            </a>
-            <a href="./the-road-ahead.html" class="header-menu__item text_white">
-              <span>CATEGORIES</span>
-            </a>
-            <a href="" class="header-menu__item text_white">
-              <span>ABOUT</span>
-            </a>
-            <a href="" class="header-menu__item text_white">
-              <span>CONTACT</span>
-            </a>
-          </nav>
-        </div>
+        <h1 class="header__title">Let's do it together.</h1>
+        <p class="header__subtitle">We travel the world in search of stories. Come along for the ride.</p>
+        <button class="header__button">View Latest Posts</button>
       </div>
     </header>
     <!--/ HEADER -->
 
-    <!-- PAGE-CONTENT -->
-    <div class="page-content">
-      <!-- SECTION: MAIN -->
-      <section class="main">
-        <div class="main__content">
-          <h1 class="main__title">Let's do it together.</h1>
-          <p class="main__description">We travel the world in search of stories. Come along for the ride.</p>
-          <button class="main__button">
-            <span>View Latest Posts</span>
-          </button>
+    <!-- SECTION: TAGS -->
+    <section class="tags">
+      <div class="tags__content tags__list">
+        <a href="#" class="tags__list-item"><span>Nature</span></a>
+        <a href="#" class="tags__list-item"><span>Photography</span></a>
+        <a href="#" class="tags__list-item"><span>Relaxation</span></a>
+        <a href="#" class="tags__list-item"><span>Vacation</span></a>
+        <a href="#" class="tags__list-item"><span>Travel</span></a>
+        <a href="#" class="tags__list-item"><span>Adventure</span></a>
+      </div>
+    </section>
+    <!--/ SECTION: TAGS -->
+
+    <!-- SECTION: POSTS -->
+    <section class="posts">
+      <!-- FEATURED-POSTS -->
+      <section class="featured-posts">
+        <h2 class="featured-posts__title">Featured Posts</h2>
+        <div class="featured-posts__board">
+          {{ range .FeaturedPosts }}
+          <article class="featured-posts__post featured-post" style="background: url({{.ImgModifier}});">
+            <div class="featured-post__tag">
+              <span>{{.Tag}}</span>
+            </div>
+            <p class="featured-post__name">{{ .Title }}</p>
+            <p class="featured-post__text">{{ .Subtitle }}</p>
+            <div class="featured-post__info">
+              <div class="featured-post__author-info">
+                <span class="featured-post__author-icon" style="background: url({{.AuthorImg}});"></span>
+                <span class="featured-post__author-name">{{ .Author }}</span>
+              </div>
+              <span class="featured-post__date">{{ .PublishDate }}</span>
+            </div>
+          </article>
+          {{ end }}
         </div>
       </section>
-      <!--/ SECTION: MAIN -->
+      <!--/ FEATURED-POSTS -->
 
-      <!-- SECTION: TAGS -->
-      <section class="tags">
-        <div class="tags__content">
-          <div class="tags-list">
-            <a href="#" class="tags-list__item">
-              <span>Nature</span>
-            </a>
-            <a href="#" class="tags-list__item">
-              <span>Photography</span>
-            </a>
-            <a href="#" class="tags-list__item">
-              <span>Relaxation</span>
-            </a>
-            <a href="#" class="tags-list__item">
-              <span>Vacation</span>
-            </a>
-            <a href="#" class="tags-list__item">
-              <span>Travel</span>
-            </a>
-            <a href="#" class="tags-list__item">
-              <span>Adventure</span>
-            </a>
-          </div>
+      <!-- RECENTLY-POSTS -->
+      <!-- <section class="most-recent-posts">
+        <h2 class="most-recent-posts__title">Most Recent</h2>
+        <div class="most-recent-posts__table">
+          {{ range .MostRecentPosts }}
+          <article class="most-recent-posts__post ">
+            <span class="most-recent-posts__post_still-standing-tall {{ .ImgModifier }}"></span>
+            <h5 class="most-recent-post__name ">{{ .Title }}</h5>
+            <p class="most-recent-post__text ">{{ .Subtitle }}</p>
+            <div class="most-recent-post__main-info ">
+              <div class="most-recent-post__info ">
+                <span class="{{ .AuthorImg }}"></span>
+                <span class="most-recent-post__name-date ">{{ .Author }}</span>
+              </div>
+              <span class="most-recent-post__name-date">{{ .PublishDate }}</span>
+            </div>
+          </article>
+          {{ end }}
         </div>
-      </section>
-      <!--/ SECTION: TAGS -->
+      </section> -->
+      <!--/ MOST__RECENTLY-POSTS -->
+    </section>
+    <!--/ SECTION: POSTS -->
 
-      <section class="posts">
-        <!-- FEATURED-POSTS -->
-        <section class="featured-posts">
-          <!-- FEATURED-POSTS:HEAD -->
-          <div class="featured-posts__head">
-            <h2 class="posts__title">Featured Posts</h2>
-            <div class="rectangle"></div>
-          </div>
-          <!--/ FEATURED-POSTS:HEAD -->
+      
 
-          <!-- FEATURED-POSTS:CONTENT -->
-          <div class="featured-posts__content">
-            <div class="post-list">
-              <!--  POST#1 -->
-              <div class="post-list__item">
-                <div class="post-list__item-tag">
-                  <span>Photography</span>
-                </div>
-                <div class="post-list__item-content">
-                  <span class="post-list__item-title">The Road Ahead</span>
-                  <p class="post-list__item-description">The road ahead might be paved - it might not be.</p>
-                </div>
-                <div class="post-list__item-person--details">
-                  <img class="post-list__item-user--icon" src="./img/user_icon_mat_vogels.jpg" alt="">
-                  <span class="post-list__item-user--name">Mat Vogels</span>
-                  <span class="post-list__item-post--date">September 25, 2015</span>
-                </div>
-              </div>
-              <!--/ POST#1 -->
-              
-              <!--  POST#2 -->
-              <div class="post-list__item">
-                <div class="post-list__item-tag">
-                  <span>Adventure</span>
-                </div>
-                <div class="post-list__item-content">
-                  <span class="post-list__item-title">From Top Down</span>
-                  <p class="post-list__item-description">Once a year, go someplace you’ve never been before.</p>
-                </div>
-                <div class="post-list__item-person--details">
-                  <img class="post-list__item-user--icon" src="./img/user_icon_william_wong.jpg" alt="">
-                  <span class="post-list__item-user--name">William Wong</span>
-                  <span class="post-list__item-post--date">September 25, 2015</span>
-                </div>
-              </div>
-              <!--/ POST#2 -->
-            </div>
-          </div>
-          <!--/ FEATURED-POSTS:CONTENT -->
-        </section>
-        <!--/ FEATURED-POSTS -->
-
-        <!-- RECENTLY-POSTS -->
-        <section class="recently-posts">
-          <!-- RECENTLY-POSTS:HEAD -->
-          <div class="recently-posts__head">
-            <h2 class="posts__title">Most Recent</h2>
-            <div class="rectangle"></div>
-          </div>
-          <!--/ RECENTLY-POSTS:HEAD -->
-
-          <!-- RECENTLY-POSTS:CONTENT -->
-          <div class="recently-posts__content">
-            <div class="post-grid">
-              <!--  POST#1 -->
-              <div class="post-grid__item">
-                <img src="./img/home/still_standing_tall.jpg" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Still Standing Tall</span>
-                  <p class="post-grid__item-description">Life begins at the end of your comfort zone.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_william_wong.jpg" alt="">
-                  <span class="post-grid__item-user--name">William Wong</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#1 -->
-              
-              <!--  POST#2 -->
-              <div class="post-grid__item">
-                <img src="./img/home/sunny_side_up.png" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Sunny Side Up</span>
-                  <p class="post-grid__item-description">No place is ever as bad as they tell you it’s going to be.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_mat_vogels.jpg" alt="">
-                  <span class="post-grid__item-user--name">Mat Vogels</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#2 -->
-
-              <!--  POST#3 -->
-              <div class="post-grid__item">
-                <img src="./img/home/water_falls.png" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Water Falls</span>
-                  <p class="post-grid__item-description">We travel not to escape life, but for life not to escape us.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_mat_vogels.jpg" alt="">
-                  <span class="post-grid__item-user--name">Mat Vogels</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#3 -->
-
-              <!--  POST#4 -->
-              <div class="post-grid__item">
-                <img src="./img/home/through_the_mist.png" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Through the Mist</span>
-                  <p class="post-grid__item-description">Travel makes you see what a tiny place you occupy in the world.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_william_wong.jpg" alt="">
-                  <span class="post-grid__item-user--name">William Wong</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#4 -->
-
-              <!--  POST#5 -->
-              <div class="post-grid__item">
-                <img src="./img/home/awaken_early.png" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Awaken Early</span>
-                  <p class="post-grid__item-description">Not all those who wander are lost.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_mat_vogels.jpg" alt="">
-                  <span class="post-grid__item-user--name">Mat Vogels</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#5 -->
-
-              <!--  POST#6 -->
-              <div class="post-grid__item">
-                <img src="./img/home/try_it_always.png" alt="" class="post-grid__item-cover">
-                <div class="post-grid__item-content">
-                  <span class="post-grid__item-title">Try it Always</span>
-                  <p class="post-grid__item-description">The world is a book, and those who do not travel read only one page.</p>
-                </div>
-                <div class="rectangle"></div>
-                <div class="post-grid__item-person--details">
-                  <img class="post-grid__item-user--icon" src="./img/user_icon_mat_vogels.jpg" alt="">
-                  <span class="post-grid__item-user--name">Mat Vogels</span>
-                  <span class="post-grid__item-post--date">9/25/2015</span>
-                </div>
-              </div>
-              <!--/ POST#6 -->
-            </div>
-          </div>
-          <!--/ RECENTLY-POSTS:CONTENT -->
-        </section>
-        <!--/ RECENTLY-POSTS -->
-      </section>
-      <!-- POSTS -->
+      
     </div>
-
     <!-- FOOTER -->
     <footer class="footer">
-      <!-- FOOTER:CONTENT -->
       <div class="footer__head">
         <h2 class="footer__title">Stay in Touch</h2>
-        <div class="rectangle"></div>
         <form class="footer__form">
           <input placeholder="Enter your email address" type="text" value="" name="email" class="footer__input">
           <input type="submit" value="Submit" class="footer__input">
         </form>
       </div>
 
-      <div class="footer-bottom">
-        <div class="header__content">
-          <div class="footer__item footer__left">
-            <a href="./index.html" class="footer__logo">
-              <span>Escape.</span>
-            </a>
-          </div>
-          <div class="footer__item footer__menu">
-            <nav class="footer-menu">
-              <a href="./index.html" class="footer-menu__item">
-                <span>HOME</span>
-              </a>
-              <a href="./the-road-ahead.html" class="footer-menu__item">
-                <span>CATEGORIES</span>
-              </a>
-              <a href="" class="footer-menu__item">
-                <span>ABOUT</span>
-              </a>
-              <a href="" class="footer-menu__item">
-                <span>CONTACT</span>
-              </a>
-            </nav>
-          </div>
+      <div class="footer__bottom">
+        <div class="footer__nav">
+          <a class="footer__nav-item footer__logo">Escape.</a>
+          <nav class="footer__nav-item footer__menu">
+            <a href="" class="footer__menu-link">Home</a>
+            <a href="" class="footer__menu-link">Categories</a>
+            <a href="" class="footer__menu-link">About</a>
+            <a href="" class="footer__menu-link">Contact</a>
+          </nav>
         </div>
       </div>
     </footer>
