@@ -177,7 +177,8 @@ a
     margin-bottom: 89px;
 }
 
-.featured-posts
+.featured-posts,
+.most-recent-posts
 {
     display: flex;
     flex-direction: column;
@@ -189,7 +190,7 @@ a
 {
     width: 188px;
     margin-top: 60px;
-    font: bold 20px/27px "Oxygen";
+    font: 20px/27px "Oxygen";
     text-align: center;
     letter-spacing: 2px;
     color: #2e2e2e;
@@ -207,6 +208,7 @@ a
 
     margin: 0px 250px;
     min-width: 940px;
+    max-width: 1000px;
 }
 
 .featured-posts__post
@@ -224,12 +226,12 @@ a
 
 .featured-post__tag
 {
+    background: #DD783F;
     position: relative;
-    background: #dd783f;
+    border-radius: 2px;
     top: 20px;
     left: 20px;
-
-    width: 89px;
+    width:fit-content;
     height: 26px;
 }
 
@@ -237,8 +239,157 @@ a
 {
     font: 12px/13px "Oxygen";
     text-transform: uppercase;
-    margin: 7px 9px;
+    margin: 6px 9px;
     color: #ffffff;
+}
+
+.featured-post__name
+{
+    position: relative;
+    margin-top: 131px;
+    margin-left: 20px;
+    font: 27px/30px "Lora";
+    color: #FFFFFF;
+}
+
+.featured-post__text
+{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 6px;
+    font: 14px/25px "Oxygen";
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.featured-post__info
+{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-post__author-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-post__author-icon
+{
+    display: flex;
+    width: 26px;
+    height: 26px;
+    background: url(.jpg);
+    border-radius: 60px;
+    margin-right: 10px;
+}
+
+.featured-post__author-name
+{
+    font: 12px/35px "Oxygen";
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.featured-post__date
+{
+    font: 12px/35px "Oxygen";
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* MOST-RECENT */
+
+.most-recent-posts__board
+{
+    display: grid;
+    margin: -6px 12px;
+
+    grid-row-gap: 25px;
+    grid-column-gap: 24px;
+    grid-template-rows: 291px 291px;
+    grid-template-columns: 296px 296px 296px;
+    
+    align-items: center;
+    justify-content: center;
+
+    min-width: 960px;
+    max-width: 1000px;
+    
+}
+
+.most-recent-posts__post
+{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
+}
+
+.most-recent-post__cover
+{
+    display: flex;
+    width: 296px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 
+.most-recent-post__name
+{
+    margin-top: 14px;
+    margin-left: 13px;
+    font: 16px/21px "Lora";
+    color: #101315;
+}
+
+.most-recent-post__text
+{
+    margin-top: 6px;
+    margin-left: 13px;
+    font: 13px/19x "Oxygen";
+    color: #7A7A7A;
+
+    font-family: "Oxygen";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 0 13px;
+    margin-top: 6px;
+    color: #7a7a7a;
+} */
+
+.nature
+{
+    background: #E6C728;
+}
+
+.photography
+{
+    background: #A872B7;
+}
+
+.adventure
+{
+    background: #DD783F;
+}
+
+.relaxation
+{
+    background: #4AAEC2;
+}
+
+.vacation
+{
+    background: #D25F7C;
+}
+
+.travel
+{
+    background: #49AE5C;
 }
 /*  <!--/ POSTS -->  */
 
