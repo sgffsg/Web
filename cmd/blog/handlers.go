@@ -98,7 +98,7 @@ func getFeaturedPosts() []featuredPostData {
 			Tag:         "photography",
 			ImgModifier: "static/img/featured-posts__post_the-road-ahead.png",
 			Author:      "Mat Vogels",
-			AuthorImg:   "static/img/mat_vogels.png",
+			AuthorImg:   "static/img/mat_vogels.jpg",
 			PublishDate: "September 25, 2015",
 		},
 		{
@@ -107,7 +107,7 @@ func getFeaturedPosts() []featuredPostData {
 			Tag:         "adventure",
 			ImgModifier: "static/img/featured-posts__post_from-top-down.png",
 			Author:      "William Wong",
-			AuthorImg:   "static/img/william_wong.png",
+			AuthorImg:   "static/img/william_wong.jpg",
 			PublishDate: "September 25, 2015",
 		},
 	}
@@ -121,7 +121,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "Life begins at the end of your comfort zone.",
 			Tag:         "nature",
 			Author:      "William Wong",
-			AuthorImg:   "static/img/william_wong.png",
+			AuthorImg:   "static/img/william_wong.jpg",
 			PublishDate: "9/25/2015",
 		},
 		{
@@ -130,7 +130,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "No place is ever as bad as they tell you it's going to be.",
 			Tag:         "Photography",
 			Author:      "Mat Vogels",
-			AuthorImg:   "static/img/mat_vogels.png",
+			AuthorImg:   "static/img/mat_vogels.jpg",
 			PublishDate: "9/25/2015",
 		},
 		{
@@ -139,7 +139,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "We travel not to escape life, but for life not to escape us.",
 			Tag:         "relaxation",
 			Author:      "Mat Vogels",
-			AuthorImg:   "static/img/mat_vogels.png",
+			AuthorImg:   "static/img/mat_vogels.jpg",
 			PublishDate: "9/25/2015",
 		},
 		{
@@ -148,7 +148,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "Travel makes you see what a tiny place you occupy in the world.",
 			Tag:         "adventure",
 			Author:      "William Wong",
-			AuthorImg:   "static/img/william_wong.png",
+			AuthorImg:   "static/img/william_wong.jpg",
 			PublishDate: "9/25/2015",
 		},
 		{
@@ -157,7 +157,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "Not all those who wander are lost.",
 			Tag:         "vacation",
 			Author:      "Mat Vogels",
-			AuthorImg:   "static/img/mat_vogels.png",
+			AuthorImg:   "static/img/mat_vogels.jpg",
 			PublishDate: "9/25/2015",
 		},
 		{
@@ -166,7 +166,7 @@ func getMostRecentPosts() []mostRecentPostData {
 			Subtitle:    "The world is a book, and those who do not travel read only one page.",
 			Tag:         "travel",
 			Author:      "Mat Vogels",
-			AuthorImg:   "static/img/mat_vogels.png",
+			AuthorImg:   "static/img/mat_vogels.jpg",
 			PublishDate: "9/25/2015",
 		},
 	}

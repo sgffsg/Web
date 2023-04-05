@@ -53,7 +53,7 @@
       <section class="featured-posts">
         <h2 class="featured-posts__title">Featured Posts</h2>
         <div class="featured-posts__board">
-          <article class="featured-posts__post featured-post" style="background: url(../static/img/featured-posts__post_the-road-ahead.png);">
+          <!-- <article class="featured-posts__post featured-post" style="background: url(../static/img/featured-posts__post_the-road-ahead.png);">
             <div class="featured-post__tag">
               <span>photography</span>
             </div>
@@ -80,8 +80,8 @@
               </div>
               <span class="featured-post__date">September 25, 2015</span>
             </div>
-          </article>
-          <!-- {{ range .FeaturedPosts }}
+          </article> -->
+          {{ range .FeaturedPosts }}
           <article class="featured-posts__post featured-post" style="background: url({{.ImgModifier}});">
             <div class="featured-post__tag {{.Tag}}">
               <span>{{.Tag}}</span>
@@ -96,7 +96,7 @@
               <span class="featured-post__date">{{ .PublishDate }}</span>
             </div>
           </article>
-          {{ end }} -->
+          {{ end }}
         </div>
       </section>
       <!--/ FEATURED-POSTS -->

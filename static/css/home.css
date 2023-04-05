@@ -304,7 +304,7 @@ a
 .most-recent-posts__board
 {
     display: grid;
-    margin: -6px 12px;
+    margin: 6px 12px;
 
     grid-row-gap: 25px;
     grid-column-gap: 24px;
@@ -325,18 +325,18 @@ a
     flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
+    height: 291px;
+    width: 296px;
 }
 
 .most-recent-post__cover
 {
     display: flex;
-    width: 296px;
-    height: 150px;
+    min-height: 150px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* 
 .most-recent-post__name
 {
     margin-top: 14px;
@@ -349,18 +349,71 @@ a
 {
     margin-top: 6px;
     margin-left: 13px;
-    font: 13px/19x "Oxygen";
+    font: 13px/19px "Oxygen";
     color: #7A7A7A;
-
-    font-family: "Oxygen";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
+    
     margin: 0 13px;
     margin-top: 6px;
     color: #7a7a7a;
-} */
+}
+
+.most-recent-post__tag
+{
+    background: #DD783F;
+    position: relative;
+    border-radius: 2px;
+    top: 10px;
+    left: 10px;
+    width:fit-content;
+    height: 22px;
+    display: flex;
+}
+
+.most-recent-post__tag > span
+{
+    font: 9px/10px "Oxygen";
+    text-transform: uppercase;
+    margin: 7px 6px;
+    color: #ffffff;
+}
+
+.most-recent-post__info
+{
+    margin-right: 13px;
+    margin-left: 13px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.most-recent-post__author-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.most-recent-post__author-icon
+{
+    display: flex;
+    width: 26px;
+    height: 26px;
+    background: url(.jpg);
+    border-radius: 60px;
+    margin-right: 10px;
+}
+
+.most-recent-post__author-name
+{
+    font: 12px/35px "Oxygen";
+    color: #999999;
+}
+
+.most-recent-post__date
+{
+    font: 12px/35px "Oxygen";
+    color: #999999;
+}
 
 .nature
 {
@@ -397,6 +450,7 @@ a
 /*<!--  FOOTER -->*/
 .footer
 {
+    margin-top: 13px;
     display: flex;
     align-items: center;
     flex-direction: column;
