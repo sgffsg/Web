@@ -52,34 +52,6 @@
       <section class="featured-posts">
         <h2 class="featured-posts__title">Featured Posts</h2>
         <div class="featured-posts__board">
-          <!-- <article class="featured-posts__post featured-post" style="background: url(../static/img/featured-posts__post_the-road-ahead.png);">
-            <div class="featured-post__tag">
-              <span>photography</span>
-            </div>
-            <p class="featured-post__name">The Road Ahead</p>
-            <p class="featured-post__text">The road ahead might be paved - it might not be.</p>
-            <div class="featured-post__info">
-              <div class="featured-post__author-info">
-                <span class="featured-post__author-icon" style="background: url(../static/img/mat_vogels.jpg);"></span>
-                <span class="featured-post__author-name">Mat Vogels</span>
-              </div>
-              <span class="featured-post__date">September 25, 2015</span>
-            </div>
-          </article>
-          <article class="featured-posts__post featured-post" style="background: url(../static/img/featured-posts__post_from-top-down.png);">
-            <div class="featured-post__tag">
-              <span>adventure</span>
-            </div>
-            <p class="featured-post__name">From Top Down</p>
-            <p class="featured-post__text">Once a year, go someplace you’ve never been before.</p>
-            <div class="featured-post__info">
-              <div class="featured-post__author-info">
-                <span class="featured-post__author-icon" style="background: url(../static/img/william_wong.jpg);"></span>
-                <span class="featured-post__author-name">William Wong</span>
-              </div>
-              <span class="featured-post__date">September 25, 2015</span>
-            </div>
-          </article> -->
           {{ range .FeaturedPosts }}
           <article class="featured-posts__post featured-post" style="background: url({{.ImgModifier}});">
             <div class="featured-post__tag {{.Tag}}">
@@ -111,8 +83,11 @@
                 <span>{{.Tag}}</span>
               </div>
             </div>
-            <p class="most-recent-post__name">{{.Title}}</p>
-            <p class="most-recent-post__text">{{.Subtitle}}</p>
+            <div class="most-recent-post__content">
+              <p class="most-recent-post__name">{{.Title}}</p>
+              <p class="most-recent-post__text">{{.Subtitle}}</p>
+            </div>
+            <div class="most-recent-post__rectangle"></div>
             <div class="most-recent-post__info">
               <div class="most-recent-post__author-info">
                 <span class="most-recent-post__author-icon" style="background: url({{.AuthorImg}});"></span>
@@ -122,22 +97,6 @@
             </div>
           </article>
           {{ end }}
-          <!-- <article class="most-recent-posts__post most-recent-post">
-            <div class="most-recent-post__cover" style="background: url(../static/img/most-recent-posts__post_still-standing-tall.jpg);">
-              <div class="most-recent-post__tag">
-                <span>Nature</span>
-              </div>
-            </div>
-            <p class="most-recent-post__name">Still Standing Tall</p>
-            <p class="most-recent-post__text">Life begins at the end of your comfort zone.</p>
-            <div class="most-recent-post__info">
-              <div class="most-recent-post__author-info">
-                <span class="most-recent-post__author-icon" style="background: url(../static/img/william_wong.jpg);"></span>
-                <span class="most-recent-post__author-name">William Wong</span>
-              </div>
-              <span class="most-recent-post__date">9/25/2015</span>
-            </div>
-          </article> -->
         </div>
       </section>
       <!--/ MOST-RECENT-POSTS -->

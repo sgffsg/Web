@@ -337,6 +337,11 @@ a
     background-repeat: no-repeat;
 }
 
+.most-recent-post__content
+{
+    height: 92px;
+}
+
 .most-recent-post__name
 {
     margin-top: 14px;
@@ -347,14 +352,17 @@ a
 
 .most-recent-post__text
 {
-    margin-top: 6px;
-    margin-left: 13px;
+    margin: 0 13px;
+    margin-top: 8px;
     font: 13px/19px "Oxygen";
     color: #7A7A7A;
-    
-    margin: 0 13px;
-    margin-top: 6px;
-    color: #7a7a7a;
+}
+
+.most-recent-post__rectangle
+{
+    width: 296px;
+    height: 1px;
+    background: #DEDEDE;
 }
 
 .most-recent-post__tag
@@ -379,11 +387,11 @@ a
 
 .most-recent-post__info
 {
-    margin-right: 13px;
-    margin-left: 13px;
-    margin-top: 12px;
+    margin: 0 13px;
+    margin-top: 7px;
     display: flex;
     justify-content: space-between;
+    justify-self: flex-end;
 }
 
 .most-recent-post__author-info
