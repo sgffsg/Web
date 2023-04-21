@@ -95,7 +95,7 @@ func post(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 		postIDStr := mux.Vars(r)["postID"] // Получаем orderID в виде строки из параметров урла
 
 		postID, err := strconv.Atoi(postIDStr) // Конвертируем строку orderID в число
-		// log.Panic(postID)
+
 		if err != nil {
 			http.Error(w, "Invalid order id", 403)
 			log.Println(err)
