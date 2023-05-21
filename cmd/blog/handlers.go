@@ -135,6 +135,50 @@ func post(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// LOGIN
+func login(w http.ResponseWriter, r *http.Request) {
+	ts, err := template.ParseFiles("pages/login.html")
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err.Error())
+		return
+	}
+
+	data := postData{
+		Title:    "The Road Ahead",
+		SubTitle: "The road ahead might be paved - it might not be.",
+	}
+
+	err = ts.Execute(w, data)
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err.Error())
+		return
+	}
+}
+
+// Admin
+func admin(w http.ResponseWriter, r *http.Request) {
+	ts, err := template.ParseFiles("pages/admin.html")
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err.Error())
+		return
+	}
+
+	data := postData{
+		Title:    "The Road Ahead",
+		SubTitle: "The road ahead might be paved - it might not be.",
+	}
+
+	err = ts.Execute(w, data)
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err.Error())
+		return
+	}
+}
+
 func getFeaturedPosts(db *sqlx.DB) ([]featuredPostData, error) {
 	const query = `
 		SELECT

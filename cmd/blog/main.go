@@ -28,6 +28,8 @@ func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/home", index(dbx))
+	r.HandleFunc("/login", login)
+	r.HandleFunc("/admin", admin)
 	r.HandleFunc("/post/{postID}", post(dbx))
 
 	// // Реализуем отдачу статики
