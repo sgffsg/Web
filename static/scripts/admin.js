@@ -18,6 +18,11 @@ let postImgInput;
 let authorIMGInput;
 let previewIMGInput;
 
+let postImgInputName;
+let authorIMGInputName;
+let previewIMGInputName;
+
+
 title.addEventListener(
     "input" , 
     () => {
@@ -91,6 +96,7 @@ uploadAuthorPhoto.addEventListener(
                 previewPostCardAuthorPhoto.src = reader.result;
                 previewInput.src = reader.result;
                 authorIMGInput = reader.result;
+                authorIMGInput = file.name;
             },
             false
         );
@@ -134,6 +140,7 @@ uploadTinyPostIMG.addEventListener(
                 previewPostCardPhoto.src = reader.result;
                 previewInput.src = reader.result;
                 previewIMGInput = reader.result;
+                previewIMGInput = file.name;
                 document.querySelector(".tiny-img-buttons").classList.add("tiny-img-buttons-show");
                 document.querySelector(".input-hero-image-tiny__sign").classList.add("input-hero-image-tiny__sign-remove");
             },
@@ -172,6 +179,7 @@ uploadPostIMG.addEventListener(
                 previewPostCardPhoto.src = reader.result;
                 previewInput.src = reader.result;
                 postImgInput = reader.result;
+                postImgInputName = file.name;
                 document.querySelector(".img-buttons").classList.add("img-buttons-show");
                 document.querySelector(".input-hero-image__sign").classList.add("input-hero-image__sign-remove");
             },
@@ -235,16 +243,17 @@ publishButton.addEventListener(
             const data = {
                 title: title.value,
                 subtitle: subTitle.value,
-                postIMG: postImgInput, 
                 authorName: author.value, 
                 authorIMG: authorIMGInput,
+                authorIMGName: authorIMGInputName,
+                postIMG: postImgInput, 
+                postIMGName: postImgInputName, 
                 previewIMG: previewIMGInput,
+                previewIMGName: previewIMGInputName,
                 publishDate: publishDate.value,
                 content: content.value,
             }
             createWarning("success", "Publish Complete!");
-
-            console.log(JSON.stringify(data, null, "\t"));
             doPost(data);
         }
         else

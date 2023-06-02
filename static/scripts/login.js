@@ -24,9 +24,9 @@ logInButton.addEventListener(
     "click",
     () => {
         if (!formValidate())
-            createWarning("critical", "A-Ah! Check all fields,");
+            createWarning("critical", "Email or password is incorrect.");
         else
-            console.log("Success");
+            window.location.href = "/admin"
     }    
 )
 
@@ -41,9 +41,34 @@ function formValidate()
     return true;
 }
 
-function isEmailValid()
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+function isEmailValid() 
 {
-    let emailInput = document.getElementById("email");
+    let input = document.getElementById("email");
+    removeError(input);
+    var value = input.value;
+    var result = true;
+    if (value == "")
+    {
+        result = false;
+        removeError(input);
+        createError(input, "Email is required.");
+    }
+    else
+    {
+        if (!EMAIL_REGEXP.test(value))
+        {
+            result = false;
+            removeError(input);
+            createError(input, "Incorrect email format. Correct format is ****@**.***");
+        }
+    }
+    return result;
+}
+
+/*function isEmailValid()
+{
+    
     let emailText = emailInput.value;
 
     let dog = emailText.indexOf("@");
@@ -104,7 +129,7 @@ function isEmailValid()
     }
     else
         return true;
-}
+}*/
 
 function isPasswordValid()
 {

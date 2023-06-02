@@ -285,6 +285,13 @@ func createPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 
 		var req createPostData
 
+		err = json.Unmarshal(reqData, &req)
+		if err != nil {
+			http.Error(w, "2Error", 500)
+			log.Println(err.Error())
+			return
+		}
+
 		authorImg, err := base64.StdEncoding.DecodeString(req.AuthorPhoto)
 		if err != nil {
 			http.Error(w, "img", 500)
@@ -317,13 +324,6 @@ func createPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 		fileSmall, err := os.Create("static/images/" + req.AuthorPhotoName)
 
 		_, err = fileSmall.Write(smallImg)
-
-		err = json.Unmarshal(reqData, &req)
-		if err != nil {
-			http.Error(w, "2Error", 500)
-			log.Println(err.Error())
-			return
-		}
 
 		err = savePost(db, req)
 		if err != nil {
